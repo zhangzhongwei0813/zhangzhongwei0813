@@ -16,7 +16,7 @@
 
     <servlet-mapping>
     <servlet-name>LifeCycleServlet</servlet-name>
-    <url-pattern>/life</url-pattern><!--url must start with/-->
+    <url-pattern>/life</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>

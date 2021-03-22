@@ -24,7 +24,7 @@ public class RegisterServlet extends HttpServlet {
         writer.println("<br>password :"+password );
         writer.println("<br>email:"+email);
         writer.println("<br>gender:"+gender);
-        writer.println("<br>birth Date :"+birthDate );
+        writer.println("<br>birth Date "+birthDate );
         writer.close();
     }
 }
