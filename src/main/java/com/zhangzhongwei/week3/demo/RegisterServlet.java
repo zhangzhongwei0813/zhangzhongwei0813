@@ -10,12 +10,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
 
-@WebService(urlPatterns = {"/register"}, LoadOnStartup = 1)
+@WebService
 public class RegisterServlet extends HttpServlet {
     Connection con = null;
 
     @Override
-    public void init() throws ServletExcetion {
+    public void init() throws ServletException {
         super.init();
         ServletContext context = getServletContext();
         String driver = context.getInitParameter("driver");
@@ -46,9 +46,10 @@ public class RegisterServlet extends HttpServlet {
 
         try {
             Statement st = con.createStatement();
+            String birthdate;
             String sql = "insert into  usertable(username,password,email,gender,birthdate)" +
-                    "values(" + username + ",'" + password + "','" + email + "','" + gender + "','" + birthdate + "')";
-            System.out.println("sql" = sql);
+                    "values(" + username + ",'" + password + "','" + email + "','" + gender + "','" + birthDate + "')";
+            System.out.println(sql);
             int n = st.executeUpdate(sql);
             System.out.println("n-->" + n);
             sql = "select id, username,password,email,birthday from usertable";
