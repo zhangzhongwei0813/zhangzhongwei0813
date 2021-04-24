@@ -3,7 +3,6 @@ package com.zhangzhongwei.model;
 import java.util.Date;
 
 public class User {
-    public Object getBirthDate;
     private int id;
     private String username;
     private String password;
