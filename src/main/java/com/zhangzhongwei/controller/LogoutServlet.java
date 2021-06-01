@@ -7,13 +7,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "LogoutServlet", value = "/logout")
+@WebServlet(name = "LogoutServlet", value = "/logout")//url
 public class LogoutServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getSession(false).invalidate();
-        request.setAttribute("message", "you have successfully Logged out.");
-        request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request, response);
+
+        //when user click logout -- method is get
+        //false means get existing session
+        request.getSession(false).invalidate();//kill session right now
+        request.setAttribute("message","you have successful Logged out");
+        request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request,response);
     }
 
     @Override

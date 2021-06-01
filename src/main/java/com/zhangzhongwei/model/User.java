@@ -1,27 +1,34 @@
 package com.zhangzhongwei.model;
 
+
 import java.util.Date;
 
 public class User {
+   // one row in usertable == one object of User
     private int id;
     private String username;
     private String password;
     private String email;
     private String gender;
-    private java.util.Date birthDate;
+    private Date birthdate;
 
+    //constructor
     public User() {
-
     }
 
-    public User(int id, String username, String password, String email, String gender, Date birthDate) {
+    //full
+
+    public User(int id, String username, String password, String email, String gender, Date birthdate) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.email = email;
         this.gender = gender;
-        this.birthDate = birthDate;
+        this.birthdate = birthdate;
     }
+
+
+    //getter and setter
 
     public int getId() {
         return id;
@@ -63,13 +70,15 @@ public class User {
         this.gender = gender;
     }
 
-    public Date getBirthDate() {
-        return birthDate;
+    public Date getBirthdate() {
+        return birthdate;
     }
 
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
+    public void setBirthdate(Date birthdate) {
+        this.birthdate = birthdate;
     }
+
+    // to String
 
     @Override
     public String toString() {
@@ -79,7 +88,7 @@ public class User {
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", gender='" + gender + '\'' +
-                ", birthDate=" + birthDate +
+                ", birthdate=" + birthdate +
                 '}';
     }
 }

@@ -22,10 +22,7 @@
     </context-param>
 
 
-    <servlet>
-        <servlet-name>HelloWorldServlet</servlet-name>
-        <servlet-class>com.zhangzhongwei.week2.demo.HelloWorldServlet</servlet-class>
-    </servlet>
+
     <servlet>
         <servlet-name>JDBCDemoServlet</servlet-name>
         <servlet-class>com.zhangzhongwei.week4.demo.JDBCDemoServlet</servlet-class>
@@ -49,10 +46,7 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>hello</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>JDBCDemoServlet</servlet-name>
         <url-pattern>/jdbc</url-pattern>

@@ -1,6 +1,6 @@
 package com.zhangzhongwei.week5.demo;
 
-import com.zhangzhongwei.Dao.UserDao;
+import com.zhangzhongwei.dao.UserDao;
 import com.zhangzhongwei.model.User;
 
 import javax.servlet.ServletException;
